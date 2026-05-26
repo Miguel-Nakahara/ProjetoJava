@@ -13,13 +13,13 @@
    <children>
       <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F4F7F5;">
          <children>
-            <Button fx:id="btnExcluir" layoutX="128.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: #E63946;" text="Excluir" />
-            <Button fx:id="btnSalvar" layoutX="20.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: #2A9D8F;" text="Salvar" />
-            <Button fx:id="btnEditar" layoutX="74.0" layoutY="246.0" mnemonicParsing="false" style="-fx-background-color: #F4A261;" text="Editar" />
-            <Label layoutX="25.0" layoutY="56.0" text="Nome" />
-            <Label layoutX="25.0" layoutY="101.0" text="Idade" />
-            <Label layoutX="25.0" layoutY="192.0" text="Valor:" />
-            <Label layoutX="26.0" layoutY="149.0" text="Desempenho" />
+            <Button fx:id="btnExcluir" layoutX="126.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnExcluirAction" style="-fx-background-color: #E63946;" text="Excluir" />
+            <Button fx:id="btnSalvar" layoutX="18.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSalvarAction" style="-fx-background-color: #2A9D8F;" text="Salvar" />
+            <Button fx:id="btnEditar" layoutX="72.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnEditarAction" style="-fx-background-color: #F4A261;" text="Editar" />
+            <Label layoutX="23.0" layoutY="104.0" text="Nome" />
+            <Label layoutX="23.0" layoutY="149.0" text="Idade" />
+            <Label layoutX="23.0" layoutY="240.0" text="Valor:" />
+            <Label layoutX="24.0" layoutY="197.0" text="Desempenho" />
             <TableView fx:id="tblJogadores" layoutX="209.0" layoutY="55.0" prefHeight="245.0" prefWidth="377.0" style="-fx-background-color: #FFFFFF; -fx-border-radius: 30px;">
               <columns>
                 <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
@@ -29,10 +29,10 @@
                   <TableColumn fx:id="colValor" prefWidth="58.0" text="Valor" />
               </columns>
             </TableView>
-            <TextField fx:id="txtDesempenho" layoutX="25.0" layoutY="165.0" />
-            <TextField fx:id="txtValor" layoutX="25.0" layoutY="207.0" />
-            <TextField fx:id="txtIdade" layoutX="25.0" layoutY="119.0" />
-            <TextField fx:id="txtNome" layoutX="25.0" layoutY="72.0" />
+            <TextField fx:id="txtDesempenho" layoutX="23.0" layoutY="213.0" />
+            <TextField fx:id="txtValor" layoutX="23.0" layoutY="255.0" />
+            <TextField fx:id="txtIdade" layoutX="23.0" layoutY="167.0" />
+            <TextField fx:id="txtNome" layoutX="23.0" layoutY="120.0" />
             <Label layoutX="50.0" layoutY="39.0" text="FUTMARKET" textAlignment="CENTER" textFill="#132216">
                <font>
                   <Font name="Arial Bold" size="15.0" />
@@ -43,6 +43,8 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
+            <Label layoutX="24.0" layoutY="61.0" text="ID" />
+            <TextField fx:id="txtId" layoutX="24.0" layoutY="77.0" />
          </children>
       </Pane>
    </children>
