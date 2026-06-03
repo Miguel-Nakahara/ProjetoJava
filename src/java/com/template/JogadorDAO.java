@@ -39,6 +39,7 @@ public class JogadorDAO {
         try(Connection c = new Conexao().conectaBD(); PreparedStatement pstm = c.prepareStatement(sql)){
 
             pstm.setInt(1, id);
+            pstm.executeUpdate();
 
         }catch(SQLException e){
             logger.log(Level.SEVERE, "Erro ao executar operação", e);
@@ -62,9 +63,9 @@ public class JogadorDAO {
         }
     }
 
-    public List<JogadorDTO> mostrarJogadores()
+    public ArrayList<JogadorDTO> mostrarJogadores()
     {
-        List<JogadorDTO> listaDeJogadores = new ArrayList<>();
+        ArrayList<JogadorDTO> listaDeJogadores = new ArrayList<>();
         String sql = "SELECT * FROM jogadores";
 
         try(Connection c = new Conexao().conectaBD(); PreparedStatement pstm = c.prepareStatement(sql)){
