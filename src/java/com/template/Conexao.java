@@ -13,7 +13,7 @@ public class Conexao {
 
     static String conexao = "jdbc:postgresql://localhost:5432/futebol";
     static String usuario = "postgres";
-    static String senha = "postgres";
+    static String senha = "Postgres123@";
 
     public Connection conectaBD(){
         try{
