@@ -94,7 +94,7 @@ public class MainController
             JogadorDAO jogadorDao = new JogadorDAO();
             jogadorDao.cadastrarJogador(jogadordto);
 
-            exibirAlerta(Alert.AlertType.INFORMATION, "Sucesso", "Jogador registrado na janela de transferências!");
+            exibirAlerta(Alert.AlertType.INFORMATION, "Sucesso", "Jogador contratado e adicionado a seus registros!");
 
             btnLimparAction(null);
             carregarJogadores();
@@ -143,14 +143,14 @@ public class MainController
     private void btnExcluirAction(ActionEvent event){
 
         if (idJogadorSelecionado == null) {
-            exibirAlerta(Alert.AlertType.WARNING, "Aviso", "Selecione o jogador que deseja excluir.");
+            exibirAlerta(Alert.AlertType.WARNING, "Aviso", "Selecione o jogador que deseja rescindir.");
             return;
         }
 
         Alert confirmacao = new Alert(Alert.AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmar Exclusão");
         confirmacao.setHeaderText("Excluir Registro de Jogador");
-        confirmacao.setContentText("Tem certeza de que deseja excluir permanentemente este jogador de seus registros?");
+        confirmacao.setContentText("Tem certeza de que deseja mesmo rescindir o contrato com esse jogador?");
 
         if (confirmacao.showAndWait().orElse(ButtonType.CANCEL) == ButtonType.OK) {
             JogadorDAO jogadorDao = new JogadorDAO();
